@@ -20,7 +20,7 @@ function newInspirationalQuote() {
       }
       document.getElementById('inspirational').onclick = function inspirationalClicked() {
           document.getElementById('click-text').innerText = `'${quote}'`;
-          newInspirationalQuote();
+          quoteFunction(data);
       };
     })
 }
