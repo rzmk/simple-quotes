@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background-color: lightblue;
+}
+.main-text {
+    margin-top: 30%;
+    font-family: Lato, sans-serif;
+    font-size: 4.5rem;
+}
+.buttons button {
+    margin: 1em 1em;
+}
