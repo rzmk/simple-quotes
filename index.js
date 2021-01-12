@@ -14,14 +14,20 @@ function newInspirationalQuote() {
       }
     })
     .then(function quoteFunction(data) {
-      let quote = data[Math.round(data.length * Math.random())].text;
+      let data_set = data[Math.round(data.length * Math.random())];
+      let quote = data_set.text
+      let author = data_set.author
       while (quote.length > 50) {
-        quote = data[Math.round(data.length * Math.random())].text;
+        data_set = data[Math.round(data.length * Math.random())];
+        quote = data_set.text
+        author = data_set.author
       }
       document.getElementById('inspirational').onclick = function inspirationalClicked() {
-          document.getElementById('click-text').innerText = `'${quote}'`;
+          document.getElementById('click-text').innerText = `"${quote}"`;
+          document.getElementById('author-text').innerText = `- ${author}`;
           quoteFunction(data);
       };
     })
 }
+
 newInspirationalQuote();
