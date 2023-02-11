@@ -4,7 +4,7 @@ let main_text = document.getElementById("click-text");
 
 // Random quote generator and display on page
 function newInspirationalQuote() {
-  fetch("https://type.fit/api/quotes")
+  fetch("https://jacintodesign.github.io/quotes-api/data/quotes.json")
     .then((response) => {
       if (response.ok) {
         data = response.json();
